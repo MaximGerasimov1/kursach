@@ -1,0 +1,71 @@
+\doxysection{supplier\+\_\+registry.\+h}
+\hypertarget{supplier__registry_8h_source}{}\label{supplier__registry_8h_source}\mbox{\hyperlink{supplier__registry_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUPPLIER\_REGISTRY\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUPPLIER\_REGISTRY\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QAbstractTableModel>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QVector>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QString>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QMessageBox>}}
+\DoxyCodeLine{00008\ }
+\DoxyCodeLine{00012\ \textcolor{keyword}{struct\ }\mbox{\hyperlink{struct_supplier}{Supplier}}\ \{}
+\DoxyCodeLine{00013\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a1059a22c26ca3a73cca88e8c4133c6ae}{name}};\ \ \ \ \ \ \ \ \ \ \ \ \ }
+\DoxyCodeLine{00014\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a9f6f0b108705e2ba33d15c8394222e78}{contractNumber}};\ \ \ }
+\DoxyCodeLine{00015\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_ae45dcda81d2e84a8aff857511b60c33c}{registrationDate}};\ }
+\DoxyCodeLine{00016\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a848f2af8195d8527465eb3963ebc89f0}{productCategory}};\ \ }
+\DoxyCodeLine{00017\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_acaa890bf9a560316c516213a4c3516f5}{qualityRating}};\ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a2a50a10f9a631c8d77170bc6f8f2294c}{deliveryTime}};\ \ \ \ \ }
+\DoxyCodeLine{00019\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a9c708e2a50f4e045f8b2ca6602ddb63f}{contactPerson}};\ \ \ \ }
+\DoxyCodeLine{00020\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a978f10260cdf89e6b686a14893d8f142}{phoneNumber}};\ \ \ \ \ \ }
+\DoxyCodeLine{00021\ \ \ \ \ QString\ \mbox{\hyperlink{struct_supplier_a858709ca43e3cd046ca45ae9ffa93597}{emailAddress}};\ \ \ \ \ }
+\DoxyCodeLine{00022\ \};}
+\DoxyCodeLine{00023\ }
+\DoxyCodeLine{00027\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_supplier_registry_aa96c41718e45967365b8e4c24eda6762}{SupplierRegistry}}\ :\ \textcolor{keyword}{public}\ QAbstractTableModel\ \{}
+\DoxyCodeLine{00028\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00029\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00030\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_supplier_registry_aa96c41718e45967365b8e4c24eda6762}{SupplierRegistry}}(QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_supplier_registry_a9b8bdccc47057c58fb0b2a2397d74fb8}{rowCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00032\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_supplier_registry_aea9a2bde0899fa3261566b18ed78fa14}{columnCount}}(\textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00033\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_supplier_registry_a45f5acaa3905bb32796c460afc156544}{data}}(\textcolor{keyword}{const}\ QModelIndex\ \&index,\ \textcolor{keywordtype}{int}\ role\ =\ Qt::DisplayRole)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00034\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_supplier_registry_a1d2851ffde1a4177811ade88bf14e002}{headerData}}(\textcolor{keywordtype}{int}\ section,\ Qt::Orientation\ orientation,\ \textcolor{keywordtype}{int}\ role\ =\ Qt::DisplayRole)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00035\ \ \ \ \ Qt::ItemFlags\ \mbox{\hyperlink{class_supplier_registry_a2dffa5793b9218f8a8d7198da6909da6}{flags}}(\textcolor{keyword}{const}\ QModelIndex\ \&index)\ \textcolor{keyword}{const\ override};}
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_registry_a7b15465dccde93e8599d8ab22c520e87}{setData}}(\textcolor{keyword}{const}\ QModelIndex\ \&index,\ \textcolor{keyword}{const}\ QVariant\ \&value,\ \textcolor{keywordtype}{int}\ role\ =\ Qt::EditRole)\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00037\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_registry_af5b5b8c88309500cdb40241c65521c30}{insertRows}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ count,\ \textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_registry_a59133724fce2577f8e6e416b09ccee70}{removeRows}}(\textcolor{keywordtype}{int}\ row,\ \textcolor{keywordtype}{int}\ count,\ \textcolor{keyword}{const}\ QModelIndex\ \&parent\ =\ QModelIndex())\ \textcolor{keyword}{override};}
+\DoxyCodeLine{00039\ }
+\DoxyCodeLine{00045\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_registry_ad2b84bef0bdff003646f33a2017e47e6}{importFromFile}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00046\ \ \ \ \ }
+\DoxyCodeLine{00052\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_registry_a4d6047ff2506a12c996d24fb344f404d}{exportToFile}}(\textcolor{keyword}{const}\ QString\ \&filePath)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00053\ \ \ \ \ }
+\DoxyCodeLine{00059\ \ \ \ \ \textcolor{keyword}{static}\ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_registry_ab8c328787862f1153d81ea2927c891fe}{verifyFileFormat}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00060\ }
+\DoxyCodeLine{00067\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_supplier_registry_aaf30b286dd8dc46323d829d8706624f6}{findInColumn}}(\textcolor{keywordtype}{int}\ columnIndex,\ \textcolor{keyword}{const}\ QString\ \&searchText)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00074\ \ \ \ \ \mbox{\hyperlink{struct_supplier}{Supplier}}\ \mbox{\hyperlink{class_supplier_registry_a46d9296b7cd3ae5f7d9ac1116c5677c2}{getSupplierData}}(\textcolor{keywordtype}{int}\ rowIndex)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00075\ \ \ \ \ }
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_registry_a2da1d1df358003f427fe52ffcf3e59c3}{updateSupplierData}}(\textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_supplier}{Supplier}}\ \&supplierData);}
+\DoxyCodeLine{00082\ \ \ \ \ }
+\DoxyCodeLine{00088\ \ \ \ \ QPair<int,\ int>\ \mbox{\hyperlink{class_supplier_registry_a20463b436447f4a84341d92ea58f25f6}{globalSearch}}(\textcolor{keyword}{const}\ QString\ \&searchText)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00089\ \ \ \ \ }
+\DoxyCodeLine{00095\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_registry_a1c2d2d6df0343766481ec133adbd31cf}{sortByColumn}}(\textcolor{keywordtype}{int}\ columnIndex,\ Qt::SortOrder\ sortOrder\ =\ Qt::AscendingOrder);}
+\DoxyCodeLine{00096\ \ \ \ \ }
+\DoxyCodeLine{00100\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_registry_ac0b4646b1169b05916fe6ba78bda77cf}{clearAllData}}();}
+\DoxyCodeLine{00101\ }
+\DoxyCodeLine{00108\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \mbox{\hyperlink{class_supplier_registry_a1db2e3c65386cf4b7f13c099f0819e1c}{validateInputData}}(\textcolor{keyword}{const}\ QString\ \&inputValue,\ \textcolor{keywordtype}{int}\ columnIndex);}
+\DoxyCodeLine{00109\ \ \ \ \ }
+\DoxyCodeLine{00115\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \mbox{\hyperlink{class_supplier_registry_a770aa6de174671c94c276dd0fd218087}{formatContractNumber}}(\textcolor{keyword}{const}\ QString\ \&contractNum);}
+\DoxyCodeLine{00116\ \ \ \ \ }
+\DoxyCodeLine{00122\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \mbox{\hyperlink{class_supplier_registry_a9d02311328bd8bab04b291bd125db978}{formatRegistrationDate}}(\textcolor{keyword}{const}\ QString\ \&date);}
+\DoxyCodeLine{00123\ \ \ \ \ }
+\DoxyCodeLine{00129\ \ \ \ \ \textcolor{keyword}{static}\ QString\ \mbox{\hyperlink{class_supplier_registry_ad7e0c0e110e4b58a06c2fe5106b1923f}{formatPhoneNumber}}(\textcolor{keyword}{const}\ QString\ \&phone);}
+\DoxyCodeLine{00130\ }
+\DoxyCodeLine{00131\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00132\ \ \ \ \ QVector<Supplier>\ m\_supplierData;\ }
+\DoxyCodeLine{00133\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_sortColumnIndex;\ }
+\DoxyCodeLine{00134\ \ \ \ \ Qt::SortOrder\ m\_sortOrder;\ }
+\DoxyCodeLine{00135\ \};}
+\DoxyCodeLine{00136\ }
+\DoxyCodeLine{00137\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUPPLIER\_REGISTRY\_H\ }}
+
+\end{DoxyCode}

@@ -1,0 +1,75 @@
+\doxysection{supplier\+\_\+management\+\_\+system.\+h}
+\hypertarget{supplier__management__system_8h_source}{}\label{supplier__management__system_8h_source}\mbox{\hyperlink{supplier__management__system_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUPPLIER\_MANAGEMENT\_SYSTEM\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUPPLIER\_MANAGEMENT\_SYSTEM\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QMainWindow>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ <QTableView>}}
+\DoxyCodeLine{00006\ \textcolor{preprocessor}{\#include\ <QMenu>}}
+\DoxyCodeLine{00007\ \textcolor{preprocessor}{\#include\ <QAction>}}
+\DoxyCodeLine{00008\ \textcolor{preprocessor}{\#include\ <QTranslator>}}
+\DoxyCodeLine{00009\ \textcolor{preprocessor}{\#include\ <string>}}
+\DoxyCodeLine{00010\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{supplier__registry_8h}{supplier\_registry.h}}"{}}}
+\DoxyCodeLine{00011\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{supplier__manager_8h}{supplier\_manager.h}}"{}}}
+\DoxyCodeLine{00012\ }
+\DoxyCodeLine{00016\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_supplier_management_system_a48cfdc17ac79f026264db73ceb96c0b2}{SupplierManagementSystem}}\ :\ \textcolor{keyword}{public}\ QMainWindow\ \{}
+\DoxyCodeLine{00017\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00018\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00019\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_supplier_management_system_a48cfdc17ac79f026264db73ceb96c0b2}{SupplierManagementSystem}}(QWidget\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00020\ \ \ \ \ \mbox{\hyperlink{class_supplier_management_system_a8efe96b6b5923a2f60f2cc3d0481d6de}{\string~SupplierManagementSystem}}();}
+\DoxyCodeLine{00021\ }
+\DoxyCodeLine{00022\ \textcolor{keyword}{private}\ slots:}
+\DoxyCodeLine{00026\ \ \ \ \ \textcolor{keywordtype}{void}\ loadFromFile();}
+\DoxyCodeLine{00027\ \ \ \ \ }
+\DoxyCodeLine{00031\ \ \ \ \ \textcolor{keywordtype}{void}\ saveToFile();}
+\DoxyCodeLine{00032\ \ \ \ \ }
+\DoxyCodeLine{00036\ \ \ \ \ \textcolor{keywordtype}{void}\ createNewSupplier();}
+\DoxyCodeLine{00037\ \ \ \ \ }
+\DoxyCodeLine{00041\ \ \ \ \ \textcolor{keywordtype}{void}\ removeSelectedSupplier();}
+\DoxyCodeLine{00042\ \ \ \ \ }
+\DoxyCodeLine{00046\ \ \ \ \ \textcolor{keywordtype}{void}\ searchInCurrentColumn();}
+\DoxyCodeLine{00047\ \ \ \ \ }
+\DoxyCodeLine{00051\ \ \ \ \ \textcolor{keywordtype}{void}\ executeGlobalSearch();}
+\DoxyCodeLine{00052\ \ \ \ \ }
+\DoxyCodeLine{00057\ \ \ \ \ \textcolor{keywordtype}{void}\ applySorting(\textcolor{keywordtype}{int}\ columnIndex);}
+\DoxyCodeLine{00058\ \ \ \ \ }
+\DoxyCodeLine{00062\ \ \ \ \ \textcolor{keywordtype}{void}\ displayAboutDialog();}
+\DoxyCodeLine{00063\ \ \ \ \ }
+\DoxyCodeLine{00067\ \ \ \ \ \textcolor{keywordtype}{void}\ switchLanguage();}
+\DoxyCodeLine{00068\ \ \ \ \ }
+\DoxyCodeLine{00073\ \ \ \ \ \textcolor{keywordtype}{void}\ showContextMenu(\textcolor{keyword}{const}\ QPoint\ \&position);}
+\DoxyCodeLine{00074\ }
+\DoxyCodeLine{00075\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00076\ \ \ \ \ \textcolor{keywordtype}{void}\ initializeMenus();}
+\DoxyCodeLine{00077\ \ \ \ \ \textcolor{keywordtype}{void}\ setupActionButtons();}
+\DoxyCodeLine{00078\ \ \ \ \ \textcolor{keywordtype}{void}\ configureTableView();}
+\DoxyCodeLine{00079\ \ \ \ \ \textcolor{keywordtype}{void}\ loadUserSettings();}
+\DoxyCodeLine{00080\ \ \ \ \ \textcolor{keywordtype}{void}\ saveUserSettings();}
+\DoxyCodeLine{00081\ \ \ \ \ \textcolor{keywordtype}{void}\ updateTranslatedTexts();}
+\DoxyCodeLine{00082\ }
+\DoxyCodeLine{00083\ \ \ \ \ QTableView\ *m\_tableView;}
+\DoxyCodeLine{00084\ \ \ \ \ \mbox{\hyperlink{class_supplier_registry}{SupplierRegistry}}\ *m\_dataModel;}
+\DoxyCodeLine{00085\ \ \ \ \ \mbox{\hyperlink{class_supplier_manager}{SupplierManager}}\ *m\_manager;}
+\DoxyCodeLine{00086\ \ \ \ \ QMenu\ *m\_fileMenu;}
+\DoxyCodeLine{00087\ \ \ \ \ QMenu\ *m\_editMenu;}
+\DoxyCodeLine{00088\ \ \ \ \ QMenu\ *m\_languageMenu;}
+\DoxyCodeLine{00089\ \ \ \ \ QMenu\ *m\_helpMenu;}
+\DoxyCodeLine{00090\ \ \ \ \ QAction\ *m\_loadAction;}
+\DoxyCodeLine{00091\ \ \ \ \ QAction\ *m\_saveAction;}
+\DoxyCodeLine{00092\ \ \ \ \ QAction\ *m\_addAction;}
+\DoxyCodeLine{00093\ \ \ \ \ QAction\ *m\_deleteAction;}
+\DoxyCodeLine{00094\ \ \ \ \ QAction\ *m\_columnSearchAction;}
+\DoxyCodeLine{00095\ \ \ \ \ QAction\ *m\_globalSearchAction;}
+\DoxyCodeLine{00096\ \ \ \ \ QAction\ *m\_aboutAction;}
+\DoxyCodeLine{00097\ \ \ \ \ QAction\ *m\_langRuAction;}
+\DoxyCodeLine{00098\ \ \ \ \ QAction\ *m\_langEnAction;}
+\DoxyCodeLine{00099\ \ \ \ \ QAction\ *m\_langTtAction;}
+\DoxyCodeLine{00100\ \ \ \ \ QTranslator\ *m\_translator;}
+\DoxyCodeLine{00101\ \ \ \ \ std::string\ m\_currentLanguage;}
+\DoxyCodeLine{00102\ \ \ \ \ \textcolor{keywordtype}{int}\ m\_activeColumnIndex;\ \ \textcolor{comment}{//\ Выбранный\ столбец\ для\ поиска/сортировки}}
+\DoxyCodeLine{00103\ \};}
+\DoxyCodeLine{00104\ }
+\DoxyCodeLine{00105\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUPPLIER\_MANAGEMENT\_SYSTEM\_H\ }}
+
+\end{DoxyCode}

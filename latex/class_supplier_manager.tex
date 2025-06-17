@@ -1,0 +1,286 @@
+\doxysection{Supplier\+Manager Class Reference}
+\hypertarget{class_supplier_manager}{}\label{class_supplier_manager}\index{SupplierManager@{SupplierManager}}
+
+
+Класс менеджера для управления взаимодействием между моделью данных оборудования и представлением  
+
+
+
+
+{\ttfamily \#include $<$supplier\+\_\+manager.\+h$>$}
+
+Inheritance diagram for Supplier\+Manager\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_supplier_manager}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_supplier_manager_ac8e2aad73e22c06dfed6a61e3b07a31b}{Supplier\+Manager}} (\mbox{\hyperlink{class_supplier_registry}{Supplier\+Registry}} \texorpdfstring{$\ast$}{*}model, QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор менеджера вентиляционного оборудования \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_manager_a59659ccd2a965470153f8694fdfb80bd}{add\+Supplier}} (const \mbox{\hyperlink{struct_supplier}{Supplier}} \&supplier\+Data)
+\begin{DoxyCompactList}\small\item\em Добавить запись оборудования \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_manager_a43781b7b7f181b0e05f327edacfde062}{remove\+Supplier}} (int row\+Index)
+\begin{DoxyCompactList}\small\item\em Удалить запись оборудования \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_manager_a76640ae839036db8cafb092814a570ac}{edit\+Supplier}} (int row\+Index, const \mbox{\hyperlink{struct_supplier}{Supplier}} \&supplier\+Data)
+\begin{DoxyCompactList}\small\item\em Редактировать запись оборудования \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_manager_ae3c498ff29ac5f1c1274999afb2048fe}{load\+Data\+From\+File}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Загрузить данные из файла \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_manager_a8429d129f547a439a195732196fa8d98}{save\+Data\+To\+File}} (const QString \&file\+Path) const
+\begin{DoxyCompactList}\small\item\em Сохранить данные в файл \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_supplier_manager_a5edf1cf8c803295735ef1cd9bd9ca8d9}{search\+By\+Column}} (int column\+Index, const QString \&search\+Text) const
+\begin{DoxyCompactList}\small\item\em Поиск по столбцу \end{DoxyCompactList}\item 
+QPair$<$ int, int $>$ \mbox{\hyperlink{class_supplier_manager_ad658f7a1361f4c34e50edee2e6e9e604}{perform\+Global\+Search}} (const QString \&search\+Text) const
+\begin{DoxyCompactList}\small\item\em Глобальный поиск по всем столбцам \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_manager_a37d68d5b1b6554cb17b7a126b0b0d268}{sort\+Data\+By\+Column}} (int column\+Index, Qt\+::\+Sort\+Order direction=Qt\+::\+Ascending\+Order)
+\begin{DoxyCompactList}\small\item\em Сортировка по столбцу \end{DoxyCompactList}\item 
+QVariant \mbox{\hyperlink{class_supplier_manager_a9d866c01f1c2d6731940eb5fdfa10cbc}{get\+Header\+Title}} (int section\+Index, Qt\+::\+Orientation orientation) const
+\begin{DoxyCompactList}\small\item\em Получить заголовок столбца \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_manager_a2aac47cb6733b0d34e9a332e507fddde}{update\+Header\+Display}} (Qt\+::\+Orientation orientation, int first\+Section, int last\+Section)
+\begin{DoxyCompactList}\small\item\em Обновить отображение заголовков \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_supplier_manager_a5ee3d74c011c8b1499f67cc3c490229e}{get\+Column\+Count}} () const
+\begin{DoxyCompactList}\small\item\em Получить количество столбцов \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Класс менеджера для управления взаимодействием между моделью данных оборудования и представлением 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_supplier_manager_ac8e2aad73e22c06dfed6a61e3b07a31b}\index{SupplierManager@{SupplierManager}!SupplierManager@{SupplierManager}}
+\index{SupplierManager@{SupplierManager}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{SupplierManager()}{SupplierManager()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_ac8e2aad73e22c06dfed6a61e3b07a31b} 
+Supplier\+Manager\+::\+Supplier\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_supplier_registry}{Supplier\+Registry}} \texorpdfstring{$\ast$}{*}}]{model}{, }\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор менеджера вентиляционного оборудования 
+
+
+\begin{DoxyParams}{Parameters}
+{\em model} & Указатель на модель данных \\
+\hline
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_supplier_manager_a59659ccd2a965470153f8694fdfb80bd}\index{SupplierManager@{SupplierManager}!addSupplier@{addSupplier}}
+\index{addSupplier@{addSupplier}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{addSupplier()}{addSupplier()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a59659ccd2a965470153f8694fdfb80bd} 
+void Supplier\+Manager\+::add\+Supplier (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{struct_supplier}{Supplier}} \&}]{supplier\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Добавить запись оборудования 
+
+Добавляет новое оборудование в модель
+
+
+\begin{DoxyParams}{Parameters}
+{\em supplier\+Data} & Структура с данными оборудования \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_manager_a76640ae839036db8cafb092814a570ac}\index{SupplierManager@{SupplierManager}!editSupplier@{editSupplier}}
+\index{editSupplier@{editSupplier}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{editSupplier()}{editSupplier()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a76640ae839036db8cafb092814a570ac} 
+void Supplier\+Manager\+::edit\+Supplier (\begin{DoxyParamCaption}\item[{int}]{row\+Index}{, }\item[{const \mbox{\hyperlink{struct_supplier}{Supplier}} \&}]{supplier\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Редактировать запись оборудования 
+
+Редактирует данные оборудования
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Index} & Индекс строки для редактирования \\
+\hline
+{\em supplier\+Data} & Новые данные оборудования \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_manager_a5ee3d74c011c8b1499f67cc3c490229e}\index{SupplierManager@{SupplierManager}!getColumnCount@{getColumnCount}}
+\index{getColumnCount@{getColumnCount}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{getColumnCount()}{getColumnCount()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a5ee3d74c011c8b1499f67cc3c490229e} 
+int Supplier\+Manager\+::get\+Column\+Count (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить количество столбцов 
+
+\begin{DoxyReturn}{Returns}
+Количество столбцов 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_manager_a9d866c01f1c2d6731940eb5fdfa10cbc}\index{SupplierManager@{SupplierManager}!getHeaderTitle@{getHeaderTitle}}
+\index{getHeaderTitle@{getHeaderTitle}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{getHeaderTitle()}{getHeaderTitle()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a9d866c01f1c2d6731940eb5fdfa10cbc} 
+QVariant Supplier\+Manager\+::get\+Header\+Title (\begin{DoxyParamCaption}\item[{int}]{section\+Index}{, }\item[{Qt\+::\+Orientation}]{orientation}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить заголовок столбца 
+
+Получает данные заголовка столбца
+
+
+\begin{DoxyParams}{Parameters}
+{\em section\+Index} & Индекс секции (столбца) \\
+\hline
+{\em orientation} & Ориентация (горизонтальная/вертикальная) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Данные заголовка 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_manager_ae3c498ff29ac5f1c1274999afb2048fe}\index{SupplierManager@{SupplierManager}!loadDataFromFile@{loadDataFromFile}}
+\index{loadDataFromFile@{loadDataFromFile}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{loadDataFromFile()}{loadDataFromFile()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_ae3c498ff29ac5f1c1274999afb2048fe} 
+bool Supplier\+Manager\+::load\+Data\+From\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Загрузить данные из файла 
+
+Загружает данные об оборудовании из файла в модель
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу для загрузки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если загрузка прошла успешно 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_manager_ad658f7a1361f4c34e50edee2e6e9e604}\index{SupplierManager@{SupplierManager}!performGlobalSearch@{performGlobalSearch}}
+\index{performGlobalSearch@{performGlobalSearch}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{performGlobalSearch()}{performGlobalSearch()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_ad658f7a1361f4c34e50edee2e6e9e604} 
+QPair$<$ int, int $>$ Supplier\+Manager\+::perform\+Global\+Search (\begin{DoxyParamCaption}\item[{const QString \&}]{search\+Text}{}\end{DoxyParamCaption}) const}
+
+
+
+Глобальный поиск по всем столбцам 
+
+Выполняет глобальный поиск по всем столбцам
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Text} & Текст для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Пара (строка, столбец) первого найденного совпадения 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_manager_a43781b7b7f181b0e05f327edacfde062}\index{SupplierManager@{SupplierManager}!removeSupplier@{removeSupplier}}
+\index{removeSupplier@{removeSupplier}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{removeSupplier()}{removeSupplier()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a43781b7b7f181b0e05f327edacfde062} 
+void Supplier\+Manager\+::remove\+Supplier (\begin{DoxyParamCaption}\item[{int}]{row\+Index}{}\end{DoxyParamCaption})}
+
+
+
+Удалить запись оборудования 
+
+Удаляет оборудование из модели
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Index} & Индекс строки для удаления \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_manager_a8429d129f547a439a195732196fa8d98}\index{SupplierManager@{SupplierManager}!saveDataToFile@{saveDataToFile}}
+\index{saveDataToFile@{saveDataToFile}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{saveDataToFile()}{saveDataToFile()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a8429d129f547a439a195732196fa8d98} 
+bool Supplier\+Manager\+::save\+Data\+To\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption}) const}
+
+
+
+Сохранить данные в файл 
+
+Сохраняет данные об оборудовании в файл
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу для сохранения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если сохранение прошло успешно 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_manager_a5edf1cf8c803295735ef1cd9bd9ca8d9}\index{SupplierManager@{SupplierManager}!searchByColumn@{searchByColumn}}
+\index{searchByColumn@{searchByColumn}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{searchByColumn()}{searchByColumn()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a5edf1cf8c803295735ef1cd9bd9ca8d9} 
+QList$<$ int $>$ Supplier\+Manager\+::search\+By\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index}{, }\item[{const QString \&}]{search\+Text}{}\end{DoxyParamCaption}) const}
+
+
+
+Поиск по столбцу 
+
+Выполняет поиск по определенному столбцу
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Index} & Индекс столбца для поиска \\
+\hline
+{\em search\+Text} & Текст для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список индексов строк, содержащих искомый текст 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_manager_a37d68d5b1b6554cb17b7a126b0b0d268}\index{SupplierManager@{SupplierManager}!sortDataByColumn@{sortDataByColumn}}
+\index{sortDataByColumn@{sortDataByColumn}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{sortDataByColumn()}{sortDataByColumn()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a37d68d5b1b6554cb17b7a126b0b0d268} 
+void Supplier\+Manager\+::sort\+Data\+By\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index}{, }\item[{Qt\+::\+Sort\+Order}]{direction}{ = {\ttfamily Qt\+:\+:AscendingOrder}}\end{DoxyParamCaption})}
+
+
+
+Сортировка по столбцу 
+
+Сортирует данные модели по указанному столбцу
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Index} & Индекс столбца для сортировки \\
+\hline
+{\em direction} & Порядок сортировки \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_manager_a2aac47cb6733b0d34e9a332e507fddde}\index{SupplierManager@{SupplierManager}!updateHeaderDisplay@{updateHeaderDisplay}}
+\index{updateHeaderDisplay@{updateHeaderDisplay}!SupplierManager@{SupplierManager}}
+\doxysubsubsection{\texorpdfstring{updateHeaderDisplay()}{updateHeaderDisplay()}}
+{\footnotesize\ttfamily \label{class_supplier_manager_a2aac47cb6733b0d34e9a332e507fddde} 
+void Supplier\+Manager\+::update\+Header\+Display (\begin{DoxyParamCaption}\item[{Qt\+::\+Orientation}]{orientation}{, }\item[{int}]{first\+Section}{, }\item[{int}]{last\+Section}{}\end{DoxyParamCaption})}
+
+
+
+Обновить отображение заголовков 
+
+Уведомляет о изменении заголовков
+
+
+\begin{DoxyParams}{Parameters}
+{\em orientation} & Ориентация заголовков \\
+\hline
+{\em first\+Section} & Индекс первого измененного заголовка \\
+\hline
+{\em last\+Section} & Индекс последнего измененного заголовка \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{supplier__manager_8h}{supplier\+\_\+manager.\+h}}\item 
+\mbox{\hyperlink{supplier__manager_8cpp}{supplier\+\_\+manager.\+cpp}}\end{DoxyCompactItemize}

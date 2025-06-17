@@ -1,0 +1,599 @@
+\doxysection{Supplier\+Registry Class Reference}
+\hypertarget{class_supplier_registry}{}\label{class_supplier_registry}\index{SupplierRegistry@{SupplierRegistry}}
+
+
+Модель данных вентиляционного оборудования для таблицы QTable\+View.  
+
+
+
+
+{\ttfamily \#include $<$supplier\+\_\+registry.\+h$>$}
+
+Inheritance diagram for Supplier\+Registry\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{class_supplier_registry}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_supplier_registry_aa96c41718e45967365b8e4c24eda6762}{Supplier\+Registry}} (QObject \texorpdfstring{$\ast$}{*}parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Конструктор модели данных вентиляционного оборудования \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_supplier_registry_a9b8bdccc47057c58fb0b2a2397d74fb8}{row\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\begin{DoxyCompactList}\small\item\em Возвращает количество строк в модели \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_supplier_registry_aea9a2bde0899fa3261566b18ed78fa14}{column\+Count}} (const QModel\+Index \&parent=QModel\+Index()) const override
+\begin{DoxyCompactList}\small\item\em Возвращает количество столбцов в модели \end{DoxyCompactList}\item 
+QVariant \mbox{\hyperlink{class_supplier_registry_a45f5acaa3905bb32796c460afc156544}{data}} (const QModel\+Index \&index, int role=Qt\+::\+Display\+Role) const override
+\begin{DoxyCompactList}\small\item\em Возвращает данные для отображения в таблице \end{DoxyCompactList}\item 
+QVariant \mbox{\hyperlink{class_supplier_registry_a1d2851ffde1a4177811ade88bf14e002}{header\+Data}} (int section, Qt\+::\+Orientation orientation, int role=Qt\+::\+Display\+Role) const override
+\begin{DoxyCompactList}\small\item\em Возвращает заголовки столбцов и строк \end{DoxyCompactList}\item 
+Qt\+::\+Item\+Flags \mbox{\hyperlink{class_supplier_registry_a2dffa5793b9218f8a8d7198da6909da6}{flags}} (const QModel\+Index \&index) const override
+\begin{DoxyCompactList}\small\item\em Возвращает флаги для ячеек таблицы \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_registry_a7b15465dccde93e8599d8ab22c520e87}{set\+Data}} (const QModel\+Index \&index, const QVariant \&value, int role=Qt\+::\+Edit\+Role) override
+\begin{DoxyCompactList}\small\item\em Устанавливает данные в модель \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_registry_af5b5b8c88309500cdb40241c65521c30}{insert\+Rows}} (int row, int count, const QModel\+Index \&parent=QModel\+Index()) override
+\begin{DoxyCompactList}\small\item\em Вставляет строки в модель \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_registry_a59133724fce2577f8e6e416b09ccee70}{remove\+Rows}} (int row, int count, const QModel\+Index \&parent=QModel\+Index()) override
+\begin{DoxyCompactList}\small\item\em Удаляет строки из модели \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_registry_ad2b84bef0bdff003646f33a2017e47e6}{import\+From\+File}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Загрузка данных из текстового файла \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_supplier_registry_a4d6047ff2506a12c996d24fb344f404d}{export\+To\+File}} (const QString \&file\+Path) const
+\begin{DoxyCompactList}\small\item\em Сохранение данных в текстовый файл \end{DoxyCompactList}\item 
+QList$<$ int $>$ \mbox{\hyperlink{class_supplier_registry_aaf30b286dd8dc46323d829d8706624f6}{find\+In\+Column}} (int column\+Index, const QString \&search\+Text) const
+\begin{DoxyCompactList}\small\item\em Поиск оборудования по столбцу \end{DoxyCompactList}\item 
+\mbox{\hyperlink{struct_supplier}{Supplier}} \mbox{\hyperlink{class_supplier_registry_a46d9296b7cd3ae5f7d9ac1116c5677c2}{get\+Supplier\+Data}} (int row\+Index) const
+\begin{DoxyCompactList}\small\item\em Получить данные об оборудовании по индексу \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_registry_a2da1d1df358003f427fe52ffcf3e59c3}{update\+Supplier\+Data}} (int row\+Index, const \mbox{\hyperlink{struct_supplier}{Supplier}} \&supplier\+Data)
+\begin{DoxyCompactList}\small\item\em Установить данные об оборудовании по индексу \end{DoxyCompactList}\item 
+QPair$<$ int, int $>$ \mbox{\hyperlink{class_supplier_registry_a20463b436447f4a84341d92ea58f25f6}{global\+Search}} (const QString \&search\+Text) const
+\begin{DoxyCompactList}\small\item\em Глобальный поиск по всем данным об оборудовании \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_registry_a1c2d2d6df0343766481ec133adbd31cf}{sort\+By\+Column}} (int column\+Index, Qt\+::\+Sort\+Order sort\+Order=Qt\+::\+Ascending\+Order)
+\begin{DoxyCompactList}\small\item\em Сортировка данных об оборудовании по столбцу \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_supplier_registry_ac0b4646b1169b05916fe6ba78bda77cf}{clear\+All\+Data}} ()
+\begin{DoxyCompactList}\small\item\em Очистить все данные об оборудовании \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static bool \mbox{\hyperlink{class_supplier_registry_ab8c328787862f1153d81ea2927c891fe}{verify\+File\+Format}} (const QString \&file\+Path)
+\begin{DoxyCompactList}\small\item\em Проверка структуры текстового файла \end{DoxyCompactList}\item 
+static QString \mbox{\hyperlink{class_supplier_registry_a1db2e3c65386cf4b7f13c099f0819e1c}{validate\+Input\+Data}} (const QString \&input\+Value, int column\+Index)
+\begin{DoxyCompactList}\small\item\em Проверить корректность данных об оборудовании \end{DoxyCompactList}\item 
+static QString \mbox{\hyperlink{class_supplier_registry_a770aa6de174671c94c276dd0fd218087}{format\+Contract\+Number}} (const QString \&contract\+Num)
+\begin{DoxyCompactList}\small\item\em Отформатировать инвентарный номер \end{DoxyCompactList}\item 
+static QString \mbox{\hyperlink{class_supplier_registry_a9d02311328bd8bab04b291bd125db978}{format\+Registration\+Date}} (const QString \&date)
+\begin{DoxyCompactList}\small\item\em Отформатировать дату регистрации \end{DoxyCompactList}\item 
+static QString \mbox{\hyperlink{class_supplier_registry_ad7e0c0e110e4b58a06c2fe5106b1923f}{format\+Phone\+Number}} (const QString \&phone)
+\begin{DoxyCompactList}\small\item\em Отформатировать номер телефона \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Модель данных вентиляционного оборудования для таблицы QTable\+View. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{class_supplier_registry_aa96c41718e45967365b8e4c24eda6762}\index{SupplierRegistry@{SupplierRegistry}!SupplierRegistry@{SupplierRegistry}}
+\index{SupplierRegistry@{SupplierRegistry}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{SupplierRegistry()}{SupplierRegistry()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_aa96c41718e45967365b8e4c24eda6762} 
+Supplier\+Registry\+::\+Supplier\+Registry (\begin{DoxyParamCaption}\item[{QObject \texorpdfstring{$\ast$}{*}}]{parent}{ = {\ttfamily nullptr}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [explicit]}}
+
+
+
+Конструктор модели данных вентиляционного оборудования 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский объект \\
+\hline
+\end{DoxyParams}
+
+
+\doxysubsection{Member Function Documentation}
+\Hypertarget{class_supplier_registry_ac0b4646b1169b05916fe6ba78bda77cf}\index{SupplierRegistry@{SupplierRegistry}!clearAllData@{clearAllData}}
+\index{clearAllData@{clearAllData}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{clearAllData()}{clearAllData()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_ac0b4646b1169b05916fe6ba78bda77cf} 
+void Supplier\+Registry\+::clear\+All\+Data (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Очистить все данные об оборудовании 
+
+\Hypertarget{class_supplier_registry_aea9a2bde0899fa3261566b18ed78fa14}\index{SupplierRegistry@{SupplierRegistry}!columnCount@{columnCount}}
+\index{columnCount@{columnCount}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{columnCount()}{columnCount()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_aea9a2bde0899fa3261566b18ed78fa14} 
+int Supplier\+Registry\+::column\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent}{ = {\ttfamily QModelIndex()}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Возвращает количество столбцов в модели 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский индекс (не используется) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Количество столбцов 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a45f5acaa3905bb32796c460afc156544}\index{SupplierRegistry@{SupplierRegistry}!data@{data}}
+\index{data@{data}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{data()}{data()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a45f5acaa3905bb32796c460afc156544} 
+QVariant Supplier\+Registry\+::data (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index}{, }\item[{int}]{role}{ = {\ttfamily Qt\+:\+:DisplayRole}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Возвращает данные для отображения в таблице 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс модели \\
+\hline
+{\em role} & Роль для отображения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Данные для отображения 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a4d6047ff2506a12c996d24fb344f404d}\index{SupplierRegistry@{SupplierRegistry}!exportToFile@{exportToFile}}
+\index{exportToFile@{exportToFile}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{exportToFile()}{exportToFile()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a4d6047ff2506a12c996d24fb344f404d} 
+bool Supplier\+Registry\+::export\+To\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption}) const}
+
+
+
+Сохранение данных в текстовый файл 
+
+Сохраняет данные в файл
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если сохранение успешно
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если данные были успешно сохранены 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_aaf30b286dd8dc46323d829d8706624f6}\index{SupplierRegistry@{SupplierRegistry}!findInColumn@{findInColumn}}
+\index{findInColumn@{findInColumn}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{findInColumn()}{findInColumn()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_aaf30b286dd8dc46323d829d8706624f6} 
+QList$<$ int $>$ Supplier\+Registry\+::find\+In\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index}{, }\item[{const QString \&}]{search\+Text}{}\end{DoxyParamCaption}) const}
+
+
+
+Поиск оборудования по столбцу 
+
+Ищет данные в указанном столбце
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Index} & Индекс столбца \\
+\hline
+{\em search\+Text} & Текст для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список индексов найденных строк
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Index} & Индекс столбца \\
+\hline
+{\em search\+Text} & Текст для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Список индексов строк, содержащих искомый текст 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a2dffa5793b9218f8a8d7198da6909da6}\index{SupplierRegistry@{SupplierRegistry}!flags@{flags}}
+\index{flags@{flags}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{flags()}{flags()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a2dffa5793b9218f8a8d7198da6909da6} 
+Qt\+::\+Item\+Flags Supplier\+Registry\+::flags (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index}{}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Возвращает флаги для ячеек таблицы 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс модели \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Флаги для ячейки 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a770aa6de174671c94c276dd0fd218087}\index{SupplierRegistry@{SupplierRegistry}!formatContractNumber@{formatContractNumber}}
+\index{formatContractNumber@{formatContractNumber}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{formatContractNumber()}{formatContractNumber()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a770aa6de174671c94c276dd0fd218087} 
+QString Supplier\+Registry\+::format\+Contract\+Number (\begin{DoxyParamCaption}\item[{const QString \&}]{contract\+Num}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отформатировать инвентарный номер 
+
+Форматирует инвентарный номер оборудования
+
+
+\begin{DoxyParams}{Parameters}
+{\em contract\+Num} & Номер договора \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Форматированный инвентарный номер
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em contract\+Num} & Инвентарный номер \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Отформатированный инвентарный номер 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_ad7e0c0e110e4b58a06c2fe5106b1923f}\index{SupplierRegistry@{SupplierRegistry}!formatPhoneNumber@{formatPhoneNumber}}
+\index{formatPhoneNumber@{formatPhoneNumber}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{formatPhoneNumber()}{formatPhoneNumber()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_ad7e0c0e110e4b58a06c2fe5106b1923f} 
+QString Supplier\+Registry\+::format\+Phone\+Number (\begin{DoxyParamCaption}\item[{const QString \&}]{phone}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отформатировать номер телефона 
+
+Форматирует номер телефона
+
+
+\begin{DoxyParams}{Parameters}
+{\em phone} & Номер телефона \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Форматированный номер телефона
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em phone} & Номер телефона \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Отформатированный номер телефона 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a9d02311328bd8bab04b291bd125db978}\index{SupplierRegistry@{SupplierRegistry}!formatRegistrationDate@{formatRegistrationDate}}
+\index{formatRegistrationDate@{formatRegistrationDate}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{formatRegistrationDate()}{formatRegistrationDate()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a9d02311328bd8bab04b291bd125db978} 
+QString Supplier\+Registry\+::format\+Registration\+Date (\begin{DoxyParamCaption}\item[{const QString \&}]{date}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Отформатировать дату регистрации 
+
+Форматирует дату регистрации
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & Дата \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Форматированная дата
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em date} & Дата \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Отформатированная дата 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a46d9296b7cd3ae5f7d9ac1116c5677c2}\index{SupplierRegistry@{SupplierRegistry}!getSupplierData@{getSupplierData}}
+\index{getSupplierData@{getSupplierData}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{getSupplierData()}{getSupplierData()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a46d9296b7cd3ae5f7d9ac1116c5677c2} 
+\mbox{\hyperlink{struct_supplier}{Supplier}} Supplier\+Registry\+::get\+Supplier\+Data (\begin{DoxyParamCaption}\item[{int}]{row\+Index}{}\end{DoxyParamCaption}) const}
+
+
+
+Получить данные об оборудовании по индексу 
+
+Возвращает данные оборудования по индексу строки
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Index} & Индекс строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура \doxylink{struct_supplier}{Supplier}
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Index} & Индекс строки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Структура данных оборудования 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a20463b436447f4a84341d92ea58f25f6}\index{SupplierRegistry@{SupplierRegistry}!globalSearch@{globalSearch}}
+\index{globalSearch@{globalSearch}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{globalSearch()}{globalSearch()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a20463b436447f4a84341d92ea58f25f6} 
+QPair$<$ int, int $>$ Supplier\+Registry\+::global\+Search (\begin{DoxyParamCaption}\item[{const QString \&}]{search\+Text}{}\end{DoxyParamCaption}) const}
+
+
+
+Глобальный поиск по всем данным об оборудовании 
+
+Выполняет глобальный поиск по всем столбцам и строкам
+
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Text} & Текст для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Индекс первого найденного соответствия (строка, столбец) или (-\/1, -\/1) если ничего не найдено
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em search\+Text} & Текст для поиска \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Пара (строка, столбец) первого найденного совпадения или (-\/1, -\/1), если ничего не найдено 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a1d2851ffde1a4177811ade88bf14e002}\index{SupplierRegistry@{SupplierRegistry}!headerData@{headerData}}
+\index{headerData@{headerData}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{headerData()}{headerData()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a1d2851ffde1a4177811ade88bf14e002} 
+QVariant Supplier\+Registry\+::header\+Data (\begin{DoxyParamCaption}\item[{int}]{section}{, }\item[{Qt\+::\+Orientation}]{orientation}{, }\item[{int}]{role}{ = {\ttfamily Qt\+:\+:DisplayRole}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Возвращает заголовки столбцов и строк 
+
+
+\begin{DoxyParams}{Parameters}
+{\em section} & Номер секции (столбца или строки) \\
+\hline
+{\em orientation} & Ориентация (горизонтальная или вертикальная) \\
+\hline
+{\em role} & Роль для отображения \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Данные заголовка 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_ad2b84bef0bdff003646f33a2017e47e6}\index{SupplierRegistry@{SupplierRegistry}!importFromFile@{importFromFile}}
+\index{importFromFile@{importFromFile}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{importFromFile()}{importFromFile()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_ad2b84bef0bdff003646f33a2017e47e6} 
+bool Supplier\+Registry\+::import\+From\+File (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption})}
+
+
+
+Загрузка данных из текстового файла 
+
+Загружает данные из файла
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если загрузка успешна
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если данные были успешно загружены 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_af5b5b8c88309500cdb40241c65521c30}\index{SupplierRegistry@{SupplierRegistry}!insertRows@{insertRows}}
+\index{insertRows@{insertRows}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{insertRows()}{insertRows()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_af5b5b8c88309500cdb40241c65521c30} 
+bool Supplier\+Registry\+::insert\+Rows (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{count}{, }\item[{const QModel\+Index \&}]{parent}{ = {\ttfamily QModelIndex()}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Вставляет строки в модель 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Позиция вставки \\
+\hline
+{\em count} & Количество строк для вставки \\
+\hline
+{\em parent} & Родительский индекс \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если строки были успешно вставлены 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a59133724fce2577f8e6e416b09ccee70}\index{SupplierRegistry@{SupplierRegistry}!removeRows@{removeRows}}
+\index{removeRows@{removeRows}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{removeRows()}{removeRows()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a59133724fce2577f8e6e416b09ccee70} 
+bool Supplier\+Registry\+::remove\+Rows (\begin{DoxyParamCaption}\item[{int}]{row}{, }\item[{int}]{count}{, }\item[{const QModel\+Index \&}]{parent}{ = {\ttfamily QModelIndex()}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Удаляет строки из модели 
+
+
+\begin{DoxyParams}{Parameters}
+{\em row} & Позиция удаления \\
+\hline
+{\em count} & Количество строк для удаления \\
+\hline
+{\em parent} & Родительский индекс \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если строки были успешно удалены 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a9b8bdccc47057c58fb0b2a2397d74fb8}\index{SupplierRegistry@{SupplierRegistry}!rowCount@{rowCount}}
+\index{rowCount@{rowCount}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{rowCount()}{rowCount()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a9b8bdccc47057c58fb0b2a2397d74fb8} 
+int Supplier\+Registry\+::row\+Count (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{parent}{ = {\ttfamily QModelIndex()}}\end{DoxyParamCaption}) const\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Возвращает количество строк в модели 
+
+
+\begin{DoxyParams}{Parameters}
+{\em parent} & Родительский индекс (не используется) \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Количество строк 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a7b15465dccde93e8599d8ab22c520e87}\index{SupplierRegistry@{SupplierRegistry}!setData@{setData}}
+\index{setData@{setData}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{setData()}{setData()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a7b15465dccde93e8599d8ab22c520e87} 
+bool Supplier\+Registry\+::set\+Data (\begin{DoxyParamCaption}\item[{const QModel\+Index \&}]{index}{, }\item[{const QVariant \&}]{value}{, }\item[{int}]{role}{ = {\ttfamily Qt\+:\+:EditRole}}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [override]}}
+
+
+
+Устанавливает данные в модель 
+
+
+\begin{DoxyParams}{Parameters}
+{\em index} & Индекс модели \\
+\hline
+{\em value} & Значение для установки \\
+\hline
+{\em role} & Роль для установки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если данные были успешно установлены 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_a1c2d2d6df0343766481ec133adbd31cf}\index{SupplierRegistry@{SupplierRegistry}!sortByColumn@{sortByColumn}}
+\index{sortByColumn@{sortByColumn}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{sortByColumn()}{sortByColumn()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a1c2d2d6df0343766481ec133adbd31cf} 
+void Supplier\+Registry\+::sort\+By\+Column (\begin{DoxyParamCaption}\item[{int}]{column\+Index}{, }\item[{Qt\+::\+Sort\+Order}]{sort\+Order}{ = {\ttfamily Qt\+:\+:AscendingOrder}}\end{DoxyParamCaption})}
+
+
+
+Сортировка данных об оборудовании по столбцу 
+
+Сортирует данные модели по указанному столбцу
+
+
+\begin{DoxyParams}{Parameters}
+{\em column\+Index} & Индекс столбца для сортировки \\
+\hline
+{\em sort\+Order} & Порядок сортировки (по возрастанию/убыванию)\\
+\hline
+{\em column\+Index} & Индекс столбца для сортировки \\
+\hline
+{\em sort\+Order} & Порядок сортировки (по возрастанию или убыванию) \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_registry_a2da1d1df358003f427fe52ffcf3e59c3}\index{SupplierRegistry@{SupplierRegistry}!updateSupplierData@{updateSupplierData}}
+\index{updateSupplierData@{updateSupplierData}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{updateSupplierData()}{updateSupplierData()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a2da1d1df358003f427fe52ffcf3e59c3} 
+void Supplier\+Registry\+::update\+Supplier\+Data (\begin{DoxyParamCaption}\item[{int}]{row\+Index}{, }\item[{const \mbox{\hyperlink{struct_supplier}{Supplier}} \&}]{supplier\+Data}{}\end{DoxyParamCaption})}
+
+
+
+Установить данные об оборудовании по индексу 
+
+Устанавливает данные оборудования по индексу строки
+
+
+\begin{DoxyParams}{Parameters}
+{\em row\+Index} & Индекс строки \\
+\hline
+{\em supplier\+Data} & Данные об оборудовании \\
+\hline
+\end{DoxyParams}
+\Hypertarget{class_supplier_registry_a1db2e3c65386cf4b7f13c099f0819e1c}\index{SupplierRegistry@{SupplierRegistry}!validateInputData@{validateInputData}}
+\index{validateInputData@{validateInputData}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{validateInputData()}{validateInputData()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_a1db2e3c65386cf4b7f13c099f0819e1c} 
+QString Supplier\+Registry\+::validate\+Input\+Data (\begin{DoxyParamCaption}\item[{const QString \&}]{input\+Value}{, }\item[{int}]{column\+Index}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверить корректность данных об оборудовании 
+
+Проверяет и форматирует данные
+
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Value} & Значение \\
+\hline
+{\em column\+Index} & Индекс столбца \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Корректное значение или пустая строка, если некорректно
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em input\+Value} & Значение для проверки \\
+\hline
+{\em column\+Index} & Индекс столбца для определения типа проверки \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Проверенное и отформатированное значение или пустую строку в случае ошибки 
+\end{DoxyReturn}
+\Hypertarget{class_supplier_registry_ab8c328787862f1153d81ea2927c891fe}\index{SupplierRegistry@{SupplierRegistry}!verifyFileFormat@{verifyFileFormat}}
+\index{verifyFileFormat@{verifyFileFormat}!SupplierRegistry@{SupplierRegistry}}
+\doxysubsubsection{\texorpdfstring{verifyFileFormat()}{verifyFileFormat()}}
+{\footnotesize\ttfamily \label{class_supplier_registry_ab8c328787862f1153d81ea2927c891fe} 
+bool Supplier\+Registry\+::verify\+File\+Format (\begin{DoxyParamCaption}\item[{const QString \&}]{file\+Path}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Проверка структуры текстового файла 
+
+Проверяет структуру файла
+
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true, если структура файла корректна
+\end{DoxyReturn}
+
+\begin{DoxyParams}{Parameters}
+{\em file\+Path} & Путь к файлу \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true если структура файла корректна 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{supplier__registry_8h}{supplier\+\_\+registry.\+h}}\item 
+\mbox{\hyperlink{supplier__registry_8cpp}{supplier\+\_\+registry.\+cpp}}\end{DoxyCompactItemize}

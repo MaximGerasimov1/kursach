@@ -1,0 +1,43 @@
+\doxysection{supplier\+\_\+manager.\+h}
+\hypertarget{supplier__manager_8h_source}{}\label{supplier__manager_8h_source}\mbox{\hyperlink{supplier__manager_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{00001\ \textcolor{preprocessor}{\#ifndef\ SUPPLIER\_MANAGER\_H}}
+\DoxyCodeLine{00002\ \textcolor{preprocessor}{\#define\ SUPPLIER\_MANAGER\_H}}
+\DoxyCodeLine{00003\ }
+\DoxyCodeLine{00004\ \textcolor{preprocessor}{\#include\ <QObject>}}
+\DoxyCodeLine{00005\ \textcolor{preprocessor}{\#include\ "{}\mbox{\hyperlink{supplier__registry_8h}{supplier\_registry.h}}"{}}}
+\DoxyCodeLine{00006\ }
+\DoxyCodeLine{00010\ \textcolor{keyword}{class\ }\mbox{\hyperlink{class_supplier_manager_ac8e2aad73e22c06dfed6a61e3b07a31b}{SupplierManager}}\ :\ \textcolor{keyword}{public}\ QObject\ \{}
+\DoxyCodeLine{00011\ \ \ \ \ Q\_OBJECT}
+\DoxyCodeLine{00012\ \textcolor{keyword}{public}:}
+\DoxyCodeLine{00013\ \ \ \ \ \textcolor{keyword}{explicit}\ \mbox{\hyperlink{class_supplier_manager_ac8e2aad73e22c06dfed6a61e3b07a31b}{SupplierManager}}(\mbox{\hyperlink{class_supplier_registry}{SupplierRegistry}}\ *model,\ QObject\ *parent\ =\ \textcolor{keyword}{nullptr});}
+\DoxyCodeLine{00014\ \ \ \ \ }
+\DoxyCodeLine{00018\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_manager_a59659ccd2a965470153f8694fdfb80bd}{addSupplier}}(\textcolor{keyword}{const}\ \mbox{\hyperlink{struct_supplier}{Supplier}}\ \&supplierData);}
+\DoxyCodeLine{00019\ \ \ \ \ }
+\DoxyCodeLine{00023\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_manager_a43781b7b7f181b0e05f327edacfde062}{removeSupplier}}(\textcolor{keywordtype}{int}\ rowIndex);}
+\DoxyCodeLine{00024\ \ \ \ \ }
+\DoxyCodeLine{00028\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_manager_a76640ae839036db8cafb092814a570ac}{editSupplier}}(\textcolor{keywordtype}{int}\ rowIndex,\ \textcolor{keyword}{const}\ \mbox{\hyperlink{struct_supplier}{Supplier}}\ \&supplierData);}
+\DoxyCodeLine{00029\ \ \ \ \ }
+\DoxyCodeLine{00033\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_manager_ae3c498ff29ac5f1c1274999afb2048fe}{loadDataFromFile}}(\textcolor{keyword}{const}\ QString\ \&filePath);}
+\DoxyCodeLine{00034\ \ \ \ \ }
+\DoxyCodeLine{00038\ \ \ \ \ \textcolor{keywordtype}{bool}\ \mbox{\hyperlink{class_supplier_manager_a8429d129f547a439a195732196fa8d98}{saveDataToFile}}(\textcolor{keyword}{const}\ QString\ \&filePath)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00039\ \ \ \ \ }
+\DoxyCodeLine{00043\ \ \ \ \ QList<int>\ \mbox{\hyperlink{class_supplier_manager_a5edf1cf8c803295735ef1cd9bd9ca8d9}{searchByColumn}}(\textcolor{keywordtype}{int}\ columnIndex,\ \textcolor{keyword}{const}\ QString\ \&searchText)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00044\ \ \ \ \ }
+\DoxyCodeLine{00048\ \ \ \ \ QPair<int,\ int>\ \mbox{\hyperlink{class_supplier_manager_ad658f7a1361f4c34e50edee2e6e9e604}{performGlobalSearch}}(\textcolor{keyword}{const}\ QString\ \&searchText)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00049\ \ \ \ \ }
+\DoxyCodeLine{00053\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_manager_a37d68d5b1b6554cb17b7a126b0b0d268}{sortDataByColumn}}(\textcolor{keywordtype}{int}\ columnIndex,\ Qt::SortOrder\ direction\ =\ Qt::AscendingOrder);}
+\DoxyCodeLine{00054\ \ \ \ \ }
+\DoxyCodeLine{00058\ \ \ \ \ QVariant\ \mbox{\hyperlink{class_supplier_manager_a9d866c01f1c2d6731940eb5fdfa10cbc}{getHeaderTitle}}(\textcolor{keywordtype}{int}\ sectionIndex,\ Qt::Orientation\ orientation)\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00059\ \ \ \ \ }
+\DoxyCodeLine{00063\ \ \ \ \ \textcolor{keywordtype}{void}\ \mbox{\hyperlink{class_supplier_manager_a2aac47cb6733b0d34e9a332e507fddde}{updateHeaderDisplay}}(Qt::Orientation\ orientation,\ \textcolor{keywordtype}{int}\ firstSection,\ \textcolor{keywordtype}{int}\ lastSection);}
+\DoxyCodeLine{00064\ \ \ \ \ }
+\DoxyCodeLine{00068\ \ \ \ \ \textcolor{keywordtype}{int}\ \mbox{\hyperlink{class_supplier_manager_a5ee3d74c011c8b1499f67cc3c490229e}{getColumnCount}}()\ \textcolor{keyword}{const};}
+\DoxyCodeLine{00069\ \ \ \ \ }
+\DoxyCodeLine{00070\ \textcolor{keyword}{private}:}
+\DoxyCodeLine{00071\ \ \ \ \ \mbox{\hyperlink{class_supplier_registry}{SupplierRegistry}}\ *m\_dataModel;}
+\DoxyCodeLine{00072\ \};}
+\DoxyCodeLine{00073\ }
+\DoxyCodeLine{00074\ \textcolor{preprocessor}{\#endif\ }\textcolor{comment}{//\ SUPPLIER\_MANAGER\_H\ }}
+
+\end{DoxyCode}
